@@ -2,7 +2,7 @@
   "name": "robofriends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kennithnichol.github.io/ZtM-robofriends/",
+  "homepage": "https://kennithnichol.github.io/robofriends/",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
