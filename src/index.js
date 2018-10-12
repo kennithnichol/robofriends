@@ -8,7 +8,7 @@ import 'tachyons';
 
 // Local imports
 import './index.css';
-import App from './blocks/App';
+import App from './containers/App';
 import {searchRobots} from './reducer';
 import * as serviceWorker from './serviceWorker';
 
