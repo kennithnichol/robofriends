@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Header from '../components/Header';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
@@ -45,7 +46,7 @@ class App extends Component {
 			( <div className='tc'><h1>Loading</h1></div> ) :
 			(
 			<div className="tc">
-				<h1 className="f1">Robot Friends</h1>
+				<Header />
 				<SearchBox
 					searchChange={this.props.onSearchChange}
 					searchFilter={this.searchField}
