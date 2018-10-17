@@ -1,61 +1,27 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import Header from '../components/Header';
-import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
-import {setSearchField} from '../actions';
-import './App.css';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setSearchField, requestRobots } from '../actions';
+
+import MainPage from '../components/MainPage';
 
 const mapStateToProps = (state) => {
 	return {
-		searchField: state.searchField
+		searchField: state.searchRobots.searchField,
+		robots: state.requestRobots.robots,
+		isPending: state.requestRobots.isPending
 	}
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onSearchChange: (event) => {
-			dispatch(setSearchField(event.target.value))
-		}
+		onSearchChange: (event) => { dispatch(setSearchField(event.target.value)) },
+		onRequestRobots: () => dispatch(requestRobots())
 	}
 }
 
-export class App extends Component {
-	constructor() {
-		super();
-		this.state = {
-			robots: []
-		}
-	}
-
-	componentDidMount() {
-		fetch('https://jsonplaceholder.typicode.com/users')
-			.then(response => response.json())
-			.then(users => this.setState({ robots: users }))
-	}
-
+class App extends Component {
 	render() {
-		const { robots } = this.state;
-		const { searchField } = this.props;
-		const filteredRobots = robots.filter(robot => (
-			robot.name.toLowerCase().includes(searchField.toLowerCase())
-		))
-
-		return !robots.length ?
-			( <div className='tc'><h1>Loading</h1></div> ) :
-			(
-			<div className="tc">
-				<Header />
-				<SearchBox
-					searchChange={this.props.onSearchChange}
-					searchFilter={this.searchField}
-				/>
-				<Scroll>
-					<CardList robots={filteredRobots} />
-				</Scroll>
-			</div>
-		);
+		return (<MainPage { ...this.props } />);
 	}
 }
 
