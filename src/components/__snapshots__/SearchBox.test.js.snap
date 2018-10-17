@@ -1,11 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App container expect to render App component 1`] = `
+exports[`SearchBox component Shallow rendering 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App
-    onSearchChange={[MockFunction]}
-  />,
+  Symbol(enzyme.__unrendered__): <SearchBox />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -19,10 +17,13 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h1>
-        Loading
-      </h1>,
-      "className": "tc",
+      "children": <input
+        aria-label="search robots"
+        className="pa3 ba b--green bg-lightest-blue "
+        placeholder="Search robots"
+        type="search"
+      />,
+      "className": "pa2",
     },
     "ref": null,
     "rendered": Object {
@@ -30,11 +31,15 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Loading",
+        "aria-label": "search robots",
+        "className": "pa3 ba b--green bg-lightest-blue ",
+        "onChange": undefined,
+        "placeholder": "Search robots",
+        "type": "search",
       },
       "ref": null,
-      "rendered": "Loading",
-      "type": "h1",
+      "rendered": null,
+      "type": "input",
     },
     "type": "div",
   },
@@ -44,10 +49,13 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h1>
-          Loading
-        </h1>,
-        "className": "tc",
+        "children": <input
+          aria-label="search robots"
+          className="pa3 ba b--green bg-lightest-blue "
+          placeholder="Search robots"
+          type="search"
+        />,
+        "className": "pa2",
       },
       "ref": null,
       "rendered": Object {
@@ -55,11 +63,15 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Loading",
+          "aria-label": "search robots",
+          "className": "pa3 ba b--green bg-lightest-blue ",
+          "onChange": undefined,
+          "placeholder": "Search robots",
+          "type": "search",
         },
         "ref": null,
-        "rendered": "Loading",
-        "type": "h1",
+        "rendered": null,
+        "type": "input",
       },
       "type": "div",
     },
