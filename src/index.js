@@ -10,7 +10,7 @@ import 'tachyons';
 // Local imports
 import './index.css';
 import App from './containers/App';
-import {requestRobots, searchRobots} from './reducer';
+import {requestRobots, searchRobots} from './reducers';
 import * as serviceWorker from './serviceWorker';
 
 const logger = createLogger();
