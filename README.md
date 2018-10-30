@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/kennithnichol/robofriends.svg?style=svg)](https://circleci.com/gh/kennithnichol/robofriends)
 # Robofriends
 A simple React/Redux progressive web app that filters your robofriends based on your search parameter.
 
